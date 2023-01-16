@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env python3
 
 import argparse
 import json
@@ -7,7 +7,7 @@ import json
 def set_kernel_spec(notebook_filepath, display_name, kernel_name):
     with open(notebook_filepath, "r") as openfile:
         notebook = json.load(openfile)
-    kernel_spec = {"display_name": display_name, "language": "python3.9", "name": kernel_name}
+    kernel_spec = {"display_name": display_name, "language": "python3", "name": kernel_name}
     if "metadata" not in notebook:
         notebook["metadata"] = {}
     notebook["metadata"]["kernelspec"] = kernel_spec
